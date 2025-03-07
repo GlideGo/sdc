@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Rental - Limited Time Offer</title>
+
+    <!-- Google Analytics Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-XXXXXXXXX-X'); // Replace with your Google Analytics ID
+    </script>
+
     <style>
         /* Basic Styles */
         body {
@@ -21,13 +32,13 @@
         
         /* Hero Section */
         .hero {
-            padding: 50px 0;
+            padding: 50px 10px;
             background-color: #231f20;
             color: white;
         }
-        
+
         .hero img {
-            width: 70%;
+            width: 80%;
             max-width: 600px;
             margin-top: 20px;
         }
@@ -45,6 +56,7 @@
             font-size: 40px;
             font-weight: bold;
             color: #acda5a;
+            margin-top: 20px;
         }
 
         .cta-button {
@@ -58,6 +70,8 @@
             text-transform: uppercase;
             margin-top: 20px;
             transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
         }
 
         .cta-button:hover {
@@ -73,11 +87,43 @@
         .benefits ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         .benefits li {
             font-size: 20px;
             margin-bottom: 10px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #2a2827;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .testimonials h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item {
+            background-color: #231f20;
+            color: #acda5a;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .testimonial-item p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .testimonial-item span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
         }
 
         /* Footer */
@@ -87,11 +133,61 @@
             color: white;
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero img {
+                width: 90%;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+
+            .benefits li {
+                font-size: 18px;
+            }
+
+            .countdown {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .hero img {
+                width: 100%;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .benefits {
+                padding: 20px;
+            }
+
+            .benefits li {
+                font-size: 16px;
+            }
+
+            .countdown {
+                font-size: 26px;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-       <img src="Glid Go.png" alt="Logo" class="logo">
     <!-- Hero Section -->
     <div class="hero">
         <h1>Limited Time Offer!</h1>
@@ -106,10 +202,9 @@
         <!-- Countdown Timer -->
         <div class="countdown" id="timer"></div>
 
-        
-           <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
+        <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
+    </div>
 
-    
     <!-- Benefits Section -->
     <div class="benefits">
         <h3>Why Choose Us?</h3>
@@ -122,8 +217,25 @@
         </ul>
     </div>
 
- <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
-        
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+        <h3>What Our Customers Say</h3>
+        <div class="testimonial-item">
+            <p>"I couldn't be happier with GlideGo! The bike is amazing, and the service is top-notch!"</p>
+            <span>- John D.</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"Great experience! The bikes are well-maintained, and I love the freedom to ride anytime."</p>
+            <span>- Sarah L.</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"The referral program is fantastic. I got 4 weeks free just by telling my friends!"</p>
+            <span>- Michael B.</span>
+        </div>
+    </div>
+
+    <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
+
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2025 GlideGo Rentals. All Rights Reserved.</p>
