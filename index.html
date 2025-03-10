@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Rental - Limited Time Offer</title>
+    <title>GlideGo - Premium E-Bike Subscription</title>
 
     <!-- Google Analytics Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
@@ -11,57 +11,30 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', 'UA-XXXXXXXXX-X'); // Replace with your Google Analytics ID
+        gtag('config', 'UA-XXXXXXXXX-X');
     </script>
 
     <style>
-        /* Basic Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #231f20;
+            background-color: #1c1c1e;
             color: white;
             margin: 0;
             padding: 0;
             text-align: center;
         }
-        
-        h1, h2, h3 {
-            font-weight: bold;
-        }
-        
-        /* Hero Section */
         .hero {
             padding: 50px 10px;
-            background-color: #231f20;
-            color: white;
+            background: linear-gradient(to right, #111, #333);
         }
-
         .hero img {
             width: 80%;
             max-width: 600px;
             margin-top: 20px;
         }
-
-        .offer {
-            background-color: #acda5a;
-            color: #231f20;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .countdown {
-            font-size: 40px;
-            font-weight: bold;
-            color: #acda5a;
-            margin-top: 20px;
-        }
-
         .cta-button {
-            background-color: #acda5a;
-            color: #231f20;
+            background-color: #ffcc00;
+            color: #1c1c1e;
             padding: 15px 30px;
             font-size: 20px;
             font-weight: bold;
@@ -72,221 +45,64 @@
             transition: 0.3s;
             display: inline-block;
             text-decoration: none;
+            border-radius: 8px;
         }
-
         .cta-button:hover {
-            background-color: #89b46f;
+            background-color: #e6b800;
         }
-
-        .benefits {
+        .benefits, .testimonials {
             padding: 30px;
             background-color: #2a2827;
             margin-top: 20px;
         }
-
-        .benefits ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .benefits li {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: #2a2827;
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 30px;
-            margin-top: 20px;
         }
-
-        .testimonials h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-item {
-            background-color: #231f20;
-            color: #acda5a;
+        .pricing-plan {
+            background: #333;
             padding: 20px;
-            margin-bottom: 15px;
             border-radius: 10px;
+            width: 300px;
         }
-
-        .testimonial-item p {
-            font-size: 18px;
-            font-style: italic;
-        }
-
-        .testimonial-item span {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 20px;
-            background-color: #231f20;
-            color: white;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero img {
-                width: 90%;
-            }
-
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 18px;
-            }
-
-            .benefits li {
-                font-size: 18px;
-            }
-
-            .countdown {
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero h2 {
-                font-size: 24px;
-            }
-
-            .hero img {
-                width: 100%;
-            }
-
-            .cta-button {
-                padding: 10px 20px;
-                font-size: 16px;
-            }
-
-            .benefits {
-                padding: 20px;
-            }
-
-            .benefits li {
-                font-size: 16px;
-            }
-
-            .countdown {
-                font-size: 26px;
-            }
-        }
-
     </style>
 </head>
 <body>
-
- <img src="Glid Go.png" alt="Logo" class="logo">
-    
-    <!-- Hero Section -->
+    <img src="Glid Go.png" alt="GlideGo Logo" class="logo">
     <div class="hero">
-        <h1>Limited Time Offer!</h1>
-        <h2>Earn Up to 4 Weeks Free</h2>
-        <h3>*Engwe EP-2 Pro*</h3>
-        <img src="Engwe straight black.png" alt="E-Bike with advertisement" class="ebike-image">
-        
-      <!-- Pricing Plan -->
+        <h1>London’s #1 E-Bike Subscription Service</h1>
+        <h2>Effortless, Affordable, and Reliable</h2>
+        <h3>For Commuters & Delivery Riders</h3>
+        <img src="Engwe straight black.png" alt="E-Bike">
+        <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join the Waitlist</a>
+    </div>
     <div class="pricing-table">
-        <!-- Flexible Plan -->
         <div class="pricing-plan">
-            <h2>Flexible Plan</h2>
-            <p><strong>Price:</strong> £65 per week</p>
-            <p><strong>Commitment:</strong> Cancel anytime</p>
-            <p><strong>Deposit:</strong> £150 (refundable)</p>
-            <p><strong>Benefits:</strong> Full e-bike, phone holder, topbox & lock included</p>
+            <h2>Essential Plan</h2>
+            <p><strong>£20/month</strong> - Maintenance & Repairs</p>
+            <p>✔ On-demand servicing</p>
+            <p>✔ Courtesy e-bike during repairs</p>
         </div>
-
-        <!-- Short-Term Commitment Plan -->
         <div class="pricing-plan">
-            <h2>8 week Commitment Plan</h2>
-            <p><strong>Price:</strong> £50 per week</p>
-            <p><strong>Commitment:</strong> 8 weeks minimum</p>
-            <p><strong>Discount:</strong> £20 off total if you renew</p>
-            <p><strong>Deposit:</strong> £150 (refundable)</p>
-            <p><strong>Benefits:</strong> Full e-bike, phone holder, topbox & lock included</p>
+            <h2>Full Subscription</h2>
+            <p><strong>£65/week</strong> - All-in-One</p>
+            <p>✔ E-Bike, Lock, Phone Holder</p>
+            <p>✔ 24/7 Maintenance & Support</p>
+            <p>✔ First 2 weeks FREE</p>
         </div>
     </div>
-        
-        <div class="offer">
-            <p>Sign up now and get your first 2 weeks FREE! Plus, refer 2 drivers and earn an additional 2 weeks FREE.</p>
-        </div>
-
-        <!-- Countdown Timer -->
-        <div class="countdown" id="timer"></div>
-
-        <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
-    </div>
-
-    <!-- Benefits Section -->
     <div class="benefits">
-        <h3>Why Choose Us?</h3>
-        <ul>
-            <li>First 2 weeks free</li>
-            <li>📦 Equipment Included</li>
-            <li>🛠️ Free Service & Maintenance</li>
-            <li>💸 Best Affordable Prices</li>
-            <li>📍 Convenient Pickup Locations</li>
-        </ul>
+        <h3>Why Choose GlideGo?</h3>
+        <p>🚴 Zero Hassle - Ride Without Worry</p>
+        <p>🔧 Free Repairs & On-Site Support</p>
+        <p>💳 Affordable & Flexible Plans</p>
     </div>
-
-    <!-- Testimonials Section -->
-    <div class="testimonials">
-        <h3>What Our Customers Say</h3>
-        <div class="testimonial-item">
-            <p>"I couldn't be happier with GlideGo! The bike is amazing, and the service is top-notch!"</p>
-            <span>- John D.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>"Great experience! The bikes are well-maintained, and I love the freedom to ride anytime."</p>
-            <span>- Sarah L.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>"The referral program is fantastic. I got 4 weeks free just by telling my friends!"</p>
-            <span>- Michael B.</span>
-        </div>
-    </div>
-
-    <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
-
-    <!-- Footer -->
+    <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join the Waitlist</a>
     <div class="footer">
         <p>&copy; 2025 GlideGo Rentals. All Rights Reserved.</p>
     </div>
-
-    <!-- JavaScript for Countdown Timer -->
-    <script>
-        var deadline = new Date("Mar 20, 2025 00:00:00 GMT+0000").getTime();
-
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var t = deadline - now;
-
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((t % (1000 * 60)) / 1000);
-
-            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-
-            if (t < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-
 </body>
 </html>
