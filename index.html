@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GlideGo - Premium E-Bike Subscription</title>
 
-    <!-- Google Analytics Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,24 +16,36 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1c1c1e;
+            background-color: #231f20;
             color: white;
             margin: 0;
             padding: 0;
             text-align: center;
         }
+        h1, h2, h3 {
+            font-weight: bold;
+        }
         .hero {
             padding: 50px 10px;
-            background: linear-gradient(to right, #111, #333);
+            background-color: #231f20;
+            color: white;
         }
         .hero img {
             width: 80%;
             max-width: 600px;
             margin-top: 20px;
         }
+        .offer {
+            background-color: #acda5a;
+            color: #231f20;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
         .cta-button {
-            background-color: #ffcc00;
-            color: #1c1c1e;
+            background-color: #acda5a;
+            color: #231f20;
             padding: 15px 30px;
             font-size: 20px;
             font-weight: bold;
@@ -45,64 +56,101 @@
             transition: 0.3s;
             display: inline-block;
             text-decoration: none;
-            border-radius: 8px;
         }
         .cta-button:hover {
-            background-color: #e6b800;
+            background-color: #89b46f;
+        }
+        .dropdown {
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #2a2827;
+            color: white;
+            border: none;
+            text-align: center;
         }
         .benefits, .testimonials {
             padding: 30px;
             background-color: #2a2827;
             margin-top: 20px;
         }
-        .pricing-table {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 30px;
-        }
-        .pricing-plan {
-            background: #333;
+        .footer {
             padding: 20px;
-            border-radius: 10px;
-            width: 300px;
+            background-color: #231f20;
         }
     </style>
 </head>
 <body>
-    <img src="Glid Go.png" alt="GlideGo Logo" class="logo">
+    <img src="Glid Go.png" alt="Logo" class="logo">
     <div class="hero">
-        <h1>London’s #1 E-Bike Subscription Service</h1>
-        <h2>Effortless, Affordable, and Reliable</h2>
-        <h3>For Commuters & Delivery Riders</h3>
-        <img src="Engwe straight black.png" alt="E-Bike">
-        <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join the Waitlist</a>
-    </div>
-    <div class="pricing-table">
-        <div class="pricing-plan">
-            <h2>Essential Plan</h2>
-            <p><strong>£20/month</strong> - Maintenance & Repairs</p>
-            <p>✔ On-demand servicing</p>
-            <p>✔ Courtesy e-bike during repairs</p>
+        <h1>London’s Premier E-Bike Subscription</h1>
+        <h2>For Delivery Riders & Daily Commuters</h2>
+        <h3>Convenience. Affordability. Premium Service.</h3>
+        
+        <label for="user-type">I am a:</label>
+        <select id="user-type" class="dropdown" onchange="updatePlan()">
+            <option value="delivery">Delivery Rider</option>
+            <option value="commuter">Commuter</option>
+        </select>
+        
+        <div id="pricing-plan"></div>
+        
+        <div class="offer">
+            <p>Sign up now and get your first 2 weeks FREE! Plus, refer 2 people and earn an additional 2 weeks FREE.</p>
         </div>
-        <div class="pricing-plan">
-            <h2>Full Subscription</h2>
-            <p><strong>£65/week</strong> - All-in-One</p>
-            <p>✔ E-Bike, Lock, Phone Holder</p>
-            <p>✔ 24/7 Maintenance & Support</p>
-            <p>✔ First 2 weeks FREE</p>
-        </div>
+        
+        <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
     </div>
+
     <div class="benefits">
         <h3>Why Choose GlideGo?</h3>
-        <p>🚴 Zero Hassle - Ride Without Worry</p>
-        <p>🔧 Free Repairs & On-Site Support</p>
-        <p>💳 Affordable & Flexible Plans</p>
+        <ul>
+            <li>📦 Equipment & Accessories Included</li>
+            <li>🛠️ On-Demand Bike Repair & Maintenance</li>
+            <li>🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
+            <li>💸 Flexible & Affordable Subscription</li>
+            <li>📍 Convenient Home & Office Service</li>
+        </ul>
     </div>
-    <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join the Waitlist</a>
+
+    <div class="testimonials">
+        <h3>What Our Customers Say</h3>
+        <div class="testimonial-item">
+            <p>"Seamless service! I never worry about my bike breaking down anymore."</p>
+            <span>- Tom R.</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"Perfect for my daily commute. The repairs & courtesy bikes save me time!"</p>
+            <span>- Emma W.</span>
+        </div>
+    </div>
+
+    <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
+
     <div class="footer">
         <p>&copy; 2025 GlideGo Rentals. All Rights Reserved.</p>
     </div>
+
+    <script>
+        function updatePlan() {
+            var userType = document.getElementById("user-type").value;
+            var pricingPlan = document.getElementById("pricing-plan");
+            
+            if (userType === "delivery") {
+                pricingPlan.innerHTML = `
+                    <h2>Delivery Rider Subscription</h2>
+                    <p>🚀 Flexible Plan - £65/week</p>
+                    <p>📅 8-Week Plan - £50/week</p>
+                    <p>🔐 £150 Refundable Deposit</p>
+                `;
+            } else {
+                pricingPlan.innerHTML = `
+                    <h2>Commuter Subscription</h2>
+                    <p>🛠️ Essential Plan (Repairs & Courtesy E-Bike) - £20/month</p>
+                    <p>🚴 Full E-Bike Rental - £50/month</p>
+                `;
+            }
+        }
+    </script>
 </body>
 </html>
