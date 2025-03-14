@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta name="description" content="GlideGo - Hassle-free e-bike rental & repairs for delivery riders & commuters in London. Get a free courtesy e-bike while we fix yours!">
-<meta property="og:title" content="GlideGo - E-Bike Rental & Repairs">
-<meta property="og:description" content="Never worry about breakdowns again. Rent an e-bike or get on-demand repairs with a free courtesy e-bike!">
-<meta property="og:image" content="https://glidego.github.io/sdc/GlideGo.png">
-<meta property="og:url" content="https://yourwebsite.com">
-<meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="GlideGo - E-Bike Rental & Repairs">
+    <meta property="og:description" content="Never worry about breakdowns again. Rent an e-bike or get on-demand repairs with a free courtesy e-bike!">
+    <meta property="og:image" content="https://glidego.github.io/sdc/GlideGo.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +21,6 @@
     </script>
 
     <style>
-        .cta-button {
-    background: linear-gradient(90deg, #acda5a, #89b46f);
-    box-shadow: 0px 5px 15px rgba(172, 218, 90, 0.4);
-}
-.cta-button:hover {
-    transform: scale(1.05);
-}
-
         body {
             font-family: Arial, sans-serif;
             background-color: #231f20;
@@ -44,12 +36,8 @@
             padding: 50px 10px;
             background-color: #231f20;
         }
-        .hero img {
-            width: 150px;
-            margin-top: 10px;
-        }
         .cta-button {
-            background-color: #acda5a;
+            background: linear-gradient(90deg, #acda5a, #89b46f);
             color: #231f20;
             padding: 15px 30px;
             font-size: 20px;
@@ -64,6 +52,7 @@
         }
         .cta-button:hover {
             background-color: #89b46f;
+            transform: scale(1.05);
         }
         .dropdown {
             margin: 20px auto;
@@ -96,9 +85,9 @@
     <img src="GlideGo.png" alt="GlideGo Logo">
 
     <div class="hero">
-        <h1>E-Bike Rentals</h1>
-        <h1>On-demand servicing + Free courtesy E-Bike</h1>
-        <h2>For Delivery Riders & Daily Commuters</h2>
+        <h1 id="title">E-Bike Rentals</h1>
+        <h1 id="subtitle">On-demand servicing + Free courtesy E-Bike</h1>
+        <h2 id="for-who">For Delivery Riders & Daily Commuters</h2>
 
         <label for="language">🌍 Choose Language:</label>
         <select id="language" class="dropdown" onchange="changeLanguage()">
@@ -108,7 +97,7 @@
             <option value="es">Español</option>
         </select>
 
-        <label for="user-type">I am a:</label>
+        <label for="user-type" id="user-label">I am a:</label>
         <select id="user-type" class="dropdown" onchange="updatePlan()">
             <option value="delivery">Delivery Rider</option>
             <option value="commuter">Commuter</option>
@@ -117,32 +106,24 @@
         <div id="pricing-plan"></div>
 
         <div class="offer">
-            <p>🚀 Get 2 WEEKS FREE + 50% off to the next 50 sign ups!</p>
+            <p id="offer-text">🚀 Get 2 WEEKS FREE + 50% off to the next 50 sign ups!</p>
         </div>
 
-        <a href="YOUR_FORM_LINK" class="cta-button" target="_blank">Join Our Waiting List</a>
+        <a href="YOUR_FORM_LINK" class="cta-button" target="_blank" id="cta-btn">Join Our Waiting List</a>
     </div>
 
     <h1>07449 282002</h1>
 
     <div class="benefits">
-        <h3>Why Choose GlideGo?</h3>
+        <h3 id="benefits-title">Why Choose GlideGo?</h3>
         <ul>
-            <li>📦 Equipment & Accessories Included</li>
-            <li>🛠️ On-Demand Repairs & Maintenance</li>
-            <li>🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
-            <li>💸 Flexible & Affordable Subscription</li>
-            <li>📍 Home & Office Service Available</li>
+            <li id="benefit-1">📦 Equipment & Accessories Included</li>
+            <li id="benefit-2">🛠️ On-Demand Repairs & Maintenance</li>
+            <li id="benefit-3">🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
+            <li id="benefit-4">💸 Flexible & Affordable Subscription</li>
+            <li id="benefit-5">📍 Home & Office Service Available</li>
         </ul>
     </div>
-
-    <div class="testimonials">
-        <h3>What Our Riders Say</h3>
-        <p>⭐️⭐️⭐️⭐️⭐️ "I never worry about breakdowns anymore!" - Tom R.</p>
-        <p>⭐️⭐️⭐️⭐️⭐️ "Saved me when my bike got a flat on the job!" - Emma W.</p>
-    </div>
-
-    <a href="YOUR_FORM_LINK" class="cta-button" target="_blank">Join Our Waiting List</a>
 
     <div class="footer">
         <p>&copy; 2025 GlideGo. All Rights Reserved.</p>
@@ -173,35 +154,50 @@
 
             var translations = {
                 "en": {
-                    title: "Worry-Free Cycling in London",
-                    subtitle: "E-Bike Subscription & On-Demand Repairs",
-                    label: "I am a:",
-                    join: "Join Our Waiting List"
+                    title: "E-Bike Rentals",
+                    subtitle: "On-demand servicing + Free courtesy E-Bike",
+                    forWho: "For Delivery Riders & Daily Commuters",
+                    userLabel: "I am a:",
+                    cta: "Join Our Waiting List",
+                    offer: "🚀 Get 2 WEEKS FREE + 50% off to the next 50 sign ups!",
+                    benefitsTitle: "Why Choose GlideGo?",
+                    benefits: [
+                        "📦 Equipment & Accessories Included",
+                        "🛠️ On-Demand Repairs & Maintenance",
+                        "🚴‍♂️ Courtesy E-Bike While We Fix Yours",
+                        "💸 Flexible & Affordable Subscription",
+                        "📍 Home & Office Service Available"
+                    ]
                 },
                 "pt": {
-                    title: "Ciclismo sem preocupações em Londres",
-                    subtitle: "Assinatura de E-Bike e Reparo Sob Demanda",
-                    label: "Eu sou um:",
-                    join: "Junte-se à Nossa Lista de Espera"
-                },
-                "hi": {
-                    title: "लंदन में बिना चिंता के साइक्लिंग",
-                    subtitle: "ई-बाइक सब्सक्रिप्शन और ऑन-डिमांड मरम्मत",
-                    label: "मैं हूँ:",
-                    join: "हमारी प्रतीक्षा सूची में शामिल हों"
-                },
-                "es": {
-                    title: "Ciclismo sin preocupaciones en Londres",
-                    subtitle: "Suscripción de E-Bike y Reparaciones a Pedido",
-                    label: "Yo soy:",
-                    join: "Únete a nuestra lista de espera"
+                    title: "Aluguel de E-Bike",
+                    subtitle: "Serviço sob demanda + Bicicleta cortesia gratuita",
+                    forWho: "Para entregadores e ciclistas diários",
+                    userLabel: "Eu sou um:",
+                    cta: "Junte-se à Nossa Lista de Espera",
+                    offer: "🚀 Ganhe 2 SEMANAS GRATUITAS + 50% de desconto para os próximos 50 inscritos!",
+                    benefitsTitle: "Por que escolher a GlideGo?",
+                    benefits: [
+                        "📦 Equipamento e acessórios incluídos",
+                        "🛠️ Reparos e manutenção sob demanda",
+                        "🚴‍♂️ Bicicleta cortesia enquanto consertamos a sua",
+                        "💸 Assinatura flexível e acessível",
+                        "📍 Serviço disponível em casa e no escritório"
+                    ]
                 }
             };
 
-            document.querySelector(".hero h1").innerText = translations[lang].title;
-            document.querySelector(".hero h2").innerText = translations[lang].subtitle;
-            document.querySelector("label[for='user-type']").innerText = translations[lang].label;
-            document.querySelector(".cta-button").innerText = translations[lang].join;
+            document.getElementById("title").innerText = translations[lang].title;
+            document.getElementById("subtitle").innerText = translations[lang].subtitle;
+            document.getElementById("for-who").innerText = translations[lang].forWho;
+            document.getElementById("user-label").innerText = translations[lang].userLabel;
+            document.getElementById("cta-btn").innerText = translations[lang].cta;
+            document.getElementById("offer-text").innerText = translations[lang].offer;
+            document.getElementById("benefits-title").innerText = translations[lang].benefitsTitle;
+
+            for (let i = 0; i < translations[lang].benefits.length; i++) {
+                document.getElementById("benefit-" + (i + 1)).innerText = translations[lang].benefits[i];
+            }
         }
     </script>
 </body>
