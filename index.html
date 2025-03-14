@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlideGo - Premium E-Bike Subscription</title>
+    <title>GlideGo - E-Bike Subscription & Repairs</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
     <script>
@@ -28,20 +28,10 @@
         .hero {
             padding: 50px 10px;
             background-color: #231f20;
-            color: white;
         }
         .hero img {
-            width: 80%;
-            max-width: 600px;
-            margin-top: 20px;
-        }
-        .offer {
-            background-color: #acda5a;
-            color: #231f20;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
+            width: 150px;
+            margin-top: 10px;
         }
         .cta-button {
             background-color: #acda5a;
@@ -69,87 +59,133 @@
             border: none;
             text-align: center;
         }
-        .benefits, .testimonials {
-            padding: 30px;
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .offer, .benefits, .testimonials {
+            padding: 20px;
             background-color: #2a2827;
             margin-top: 20px;
+            border-radius: 10px;
         }
         .footer {
-            padding: 20px;
+            padding: 15px;
             background-color: #231f20;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <img src="Glid Go.png" alt="Logo" class="logo">
+    <img src="GlideGo_Logo.png" alt="GlideGo Logo">
+
     <div class="hero">
-        <h1>London’s Premier E-Bike Subscription</h1>
-        <h2>For Delivery Riders & Daily Commuters</h2>
-        <h3>Convenience. Affordability. Premium Service.</h3>
-        
+        <h1>🚴‍♂️ Worry-Free Cycling in London</h1>
+        <h2>E-Bike Subscription & On-Demand Repairs</h2>
+        <h3>For Delivery Riders & Daily Commuters</h3>
+
+        <label for="language">🌍 Choose Language:</label>
+        <select id="language" class="dropdown" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="hi">हिंदी</option>
+            <option value="es">Español</option>
+        </select>
+
         <label for="user-type">I am a:</label>
         <select id="user-type" class="dropdown" onchange="updatePlan()">
             <option value="delivery">Delivery Rider</option>
             <option value="commuter">Commuter</option>
         </select>
-        
+
         <div id="pricing-plan"></div>
-        
+
         <div class="offer">
-            <p>Sign up now and get your first 2 weeks FREE! Plus, refer 2 people and earn an additional 2 weeks FREE.</p>
+            <p>🚀 Get 2 WEEKS FREE when you sign up! Refer 2 friends = Another 2 weeks FREE!</p>
         </div>
-        
-        <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
+
+        <a href="YOUR_FORM_LINK" class="cta-button" target="_blank">Join Our Waiting List</a>
     </div>
 
     <div class="benefits">
         <h3>Why Choose GlideGo?</h3>
         <ul>
             <li>📦 Equipment & Accessories Included</li>
-            <li>🛠️ On-Demand Bike Repair & Maintenance</li>
+            <li>🛠️ On-Demand Repairs & Maintenance</li>
             <li>🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
             <li>💸 Flexible & Affordable Subscription</li>
-            <li>📍 Convenient Home & Office Service</li>
+            <li>📍 Home & Office Service Available</li>
         </ul>
     </div>
 
     <div class="testimonials">
-        <h3>What Our Customers Say</h3>
-        <div class="testimonial-item">
-            <p>"Seamless service! I never worry about my bike breaking down anymore."</p>
-            <span>- Tom R.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>"Perfect for my daily commute. The repairs & courtesy bikes save me time!"</p>
-            <span>- Emma W.</span>
-        </div>
+        <h3>What Our Riders Say</h3>
+        <p>⭐️⭐️⭐️⭐️⭐️ "I never worry about breakdowns anymore!" - Tom R.</p>
+        <p>⭐️⭐️⭐️⭐️⭐️ "Saved me when my bike got a flat on the job!" - Emma W.</p>
     </div>
 
-    <a href="https://forms.gle/43fzwknWNyYXK7bE9" class="cta-button" target="_blank">Join our Waiting List</a>
+    <a href="YOUR_FORM_LINK" class="cta-button" target="_blank">Join Our Waiting List</a>
 
     <div class="footer">
-        <p>&copy; 2025 GlideGo Rentals. All Rights Reserved.</p>
+        <p>&copy; 2025 GlideGo. All Rights Reserved.</p>
     </div>
 
     <script>
         function updatePlan() {
             var userType = document.getElementById("user-type").value;
             var pricingPlan = document.getElementById("pricing-plan");
-            
+
             if (userType === "delivery") {
                 pricingPlan.innerHTML = `
-                    <h2>Delivery Rider Subscription</h2>
-                    <p>🚀 Flexible Plan - £65/week</p>
+                    <h2>📦 Delivery Rider Plan</h2>
+                    <p>💰 Flexible Plan - £65/week</p>
                     <p>📅 8-Week Plan - £50/week</p>
                     <p>🔐 £150 Refundable Deposit</p>
                 `;
             } else {
                 pricingPlan.innerHTML = `
-                    <h2>Commuter Subscription</h2>
-                    <p>🛠️ Essential Plan (Repairs & Courtesy E-Bike) - £20/month</p>
+                    <h2>🚴 Commuter Plan</h2>
+                    <p>🛠️ Repairs & Courtesy Bike - £20/month</p>
                     <p>🚴 Full E-Bike Rental - £50/month</p>
                 `;
             }
+        }
+
+        function changeLanguage() {
+            var lang = document.getElementById("language").value;
+
+            var translations = {
+                "en": {
+                    title: "Worry-Free Cycling in London",
+                    subtitle: "E-Bike Subscription & On-Demand Repairs",
+                    label: "I am a:",
+                    join: "Join Our Waiting List"
+                },
+                "pt": {
+                    title: "Ciclismo sem preocupações em Londres",
+                    subtitle: "Assinatura de E-Bike e Reparo Sob Demanda",
+                    label: "Eu sou um:",
+                    join: "Junte-se à Nossa Lista de Espera"
+                },
+                "hi": {
+                    title: "लंदन में बिना चिंता के साइक्लिंग",
+                    subtitle: "ई-बाइक सब्सक्रिप्शन और ऑन-डिमांड मरम्मत",
+                    label: "मैं हूँ:",
+                    join: "हमारी प्रतीक्षा सूची में शामिल हों"
+                },
+                "es": {
+                    title: "Ciclismo sin preocupaciones en Londres",
+                    subtitle: "Suscripción de E-Bike y Reparaciones a Pedido",
+                    label: "Yo soy:",
+                    join: "Únete a nuestra lista de espera"
+                }
+            };
+
+            document.querySelector(".hero h1").innerText = translations[lang].title;
+            document.querySelector(".hero h2").innerText = translations[lang].subtitle;
+            document.querySelector("label[for='user-type']").innerText = translations[lang].label;
+            document.querySelector(".cta-button").innerText = translations[lang].join;
         }
     </script>
 </body>
