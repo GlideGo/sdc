@@ -81,9 +81,8 @@
     <img src="GlideGo_Logo.png" alt="GlideGo Logo">
 
     <div class="hero">
-        <h1>🚴‍♂️ Worry-Free Cycling in London</h1>
-        <h2>E-Bike Subscription & On-Demand Repairs</h2>
-        <h3>For Delivery Riders & Daily Commuters</h3>
+        <h1>E-Bike Subscription - On-Demand Repairs</h1>
+        <h2>For Delivery Riders & Daily Commuters</h2>
 
         <label for="language">🌍 Choose Language:</label>
         <select id="language" class="dropdown" onchange="changeLanguage()">
@@ -138,16 +137,15 @@
 
             if (userType === "delivery") {
                 pricingPlan.innerHTML = `
-                    <h2>📦 Delivery Rider Plan</h2>
-                    <p>💰 Flexible Plan - £65/week</p>
-                    <p>📅 8-Week Plan - £50/week</p>
-                    <p>🔐 £150 Refundable Deposit</p>
+                    <h1>📦 Delivery Rider Plan</h1>
+                    <h2>💰 Flexible Plan - £65/week</h2>
+                    <h2>📅 8-Week Plan - £50/week</h2>
+                    <h2>🔐 £150 Refundable Deposit</h2>
                 `;
             } else {
                 pricingPlan.innerHTML = `
-                    <h2>🚴 Commuter Plan</h2>
-                    <p>🛠️ Repairs & Courtesy Bike - £20/month</p>
-                    <p>🚴 Full E-Bike Rental - £50/month</p>
+                    <h1>🚴 Commuter Plan</h1>
+                   <h2>🛠️ Repairs & Courtesy Bike - £20/month</h2>
                 `;
             }
         }
