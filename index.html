@@ -3,110 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GlideGo - Hassle-free e-bike rental & repairs for delivery riders & commuters in London. Get a free courtesy e-bike while we fix yours!">
-    <title>GlideGo - E-Bike Subscription & Repairs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>GlideGo - E-Bike Solutions</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
         body {
+            font-family: Arial, sans-serif;
             background-color: #231f20;
             color: white;
+            margin: 0;
+            padding: 0;
             text-align: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-        .logo img {
-            max-width: 150px;
-            height: auto;
         }
         .hero {
-            padding: 50px 20px;
-            text-align: center;
+            padding: 50px 10px;
+            background-color: #231f20;
         }
         .cta-button {
             background: linear-gradient(90deg, #acda5a, #89b46f);
             color: #231f20;
             padding: 15px 30px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
             margin-top: 20px;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
         }
         .cta-button:hover {
+            background-color: #89b46f;
             transform: scale(1.05);
         }
-        .benefits, .pricing {
-            background: #2a2827;
-            padding: 30px;
+        .dropdown {
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #2a2827;
+            color: white;
+            border: none;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .plan-details {
+            display: none;
+            background-color: #2a2827;
+            padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
-        }
-        .footer {
-            background: #1a1919;
-            padding: 15px;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .logo img {
-                max-width: 120px;
-            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="GlideGo.png" alt="GlideGo Logo">
-        </div>
-        <div>
-            <a href="tel:07449282002" class="cta-button">Call Us: 07449 282002</a>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="hero">
-            <h1>E-Bike Rentals & Repairs</h1>
-            <h2>On-demand servicing + Free courtesy E-Bike</h2>
-            <p>For Delivery Riders & Daily Commuters</p>
-            <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button">Sign Up Today!</a>
-        </div>
-        
-        <div class="benefits">
-            <h2>Why Choose GlideGo?</h2>
-            <ul>
-                <li>📦 Equipment & Accessories Included</li>
-                <li>🛠️ On-Demand Repairs & Maintenance</li>
-                <li>🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
-                <li>💸 Flexible & Affordable Subscription</li>
-                <li>📍 Home & Office Service Available</li>
-            </ul>
-        </div>
+    <div class="hero">
+        <h1>GlideGo - E-Bike Solutions</h1>
+        <label for="user-type">Choose Your Plan:</label>
+        <select id="user-type" class="dropdown" onchange="updatePlan()">
+            <option value="delivery">Delivery Rider Rental</option>
+            <option value="commuter">Commuter Mobile Servicing</option>
+        </select>
     </div>
-    
-    <div class="footer">
-        <p>&copy; 2025 GlideGo. All Rights Reserved.</p>
+
+    <div id="delivery-plan" class="plan-details">
+        <h2>Delivery Rider Plan</h2>
+        <p>🚀 Limited Availability! Secure Your E-Bike Today!</p>
+        <p>💰 **£50/week** (Drops to **£45/week** after 8 weeks!)</p>
+        <p>📦 **What's Included:**</p>
+        <ul>
+            <li>16Ah Battery</li>
+            <li>Optional Extra Battery (£15/week)</li>
+            <li>GPS Tracking</li>
+            <li>Phone Holder</li>
+            <li>Rear Topbox</li>
+            <li>Optional Helmet</li>
+            <li>Optional Handlebar Gloves</li>
+            <li>Secure Lock</li>
+        </ul>
+        <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button" target="_blank">Get Started Now</a>
     </div>
+
+    <div id="commuter-plan" class="plan-details">
+        <h2>Commuter Mobile Servicing</h2>
+        <p>⏳ **Time is crucial—Don't waste it on breakdowns!**</p>
+        <p>🚲 **Instant Fix. Temporary E-Bike Swap. No Time Lost.**</p>
+        <p>🛠️ Open the app → Press a button → A specialist arrives ASAP</p>
+        <p>🔄 Get a **premium courtesy e-bike** while we repair yours</p>
+        <p>📍 We return later and swap it back.</p>
+        <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button" target="_blank">Sign Up Now</a>
+    </div>
+
+    <script>
+        function updatePlan() {
+            var userType = document.getElementById("user-type").value;
+            document.getElementById("delivery-plan").style.display = userType === "delivery" ? "block" : "none";
+            document.getElementById("commuter-plan").style.display = userType === "commuter" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
