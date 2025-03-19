@@ -1,315 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="GlideGo - Hassle-free e-bike rental & repairs for delivery riders & commuters in London. Get a free courtesy e-bike while we fix yours!">
-    <meta property="og:title" content="GlideGo - E-Bike Rental & Repairs">
-    <meta property="og:description" content="Never worry about breakdowns again. Rent an e-bike or get on-demand repairs with a free courtesy e-bike!">
-    <meta property="og:image" content="https://glidego.github.io/sdc/GlideGo.png">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta name="twitter:card" content="summary_large_image">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GlideGo - Hassle-free e-bike rental & repairs for delivery riders & commuters in London. Get a free courtesy e-bike while we fix yours!">
     <title>GlideGo - E-Bike Subscription & Repairs</title>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTMXDRJ6VT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KTMXDRJ6VT');
-</script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #231f20;
-            color: white;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #231f20;
+            color: white;
             text-align: center;
         }
-        h1, h2, h3 {
-            font-weight: bold;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
         }
         .hero {
-            padding: 50px 10px;
-            background-color: #231f20;
+            padding: 50px 20px;
+            text-align: center;
         }
         .cta-button {
             background: linear-gradient(90deg, #acda5a, #89b46f);
             color: #231f20;
             padding: 15px 30px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            margin-top: 20px;
-            transition: 0.3s;
-            display: inline-block;
+            border-radius: 8px;
             text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #89b46f;
             transform: scale(1.05);
         }
-        .dropdown {
-            margin: 20px auto;
-            padding: 10px;
-            font-size: 18px;
-            background-color: #2a2827;
-            color: white;
-            border: none;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .offer, .benefits, .testimonials {
-            padding: 20px;
-            background-color: #2a2827;
-            margin-top: 20px;
+        .benefits, .pricing {
+            background: #2a2827;
+            padding: 30px;
             border-radius: 10px;
+            margin-top: 20px;
         }
         .footer {
+            background: #1a1919;
             padding: 15px;
-            background-color: #231f20;
             font-size: 14px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo img {
+                max-width: 120px;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="GlideGo.png" alt="GlideGo Logo">
-
-    <div class="hero">
-        <h1 id="title">E-Bike Rentals</h1>
-        <h1 id="subtitle">On-demand servicing/repairs + Free courtesy E-Bike</h1>
-        <h2 id="for-who">For Delivery Riders & Daily Commuters</h2>
-
-        <label for="language">🌍 Choose Language:</label>
-        <select id="language" class="dropdown" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="pt">Português</option>
-            <option value="hi">हिंदी</option>
-            <option value="es">Español</option>
-        </select>
-
-        <label for="user-type" id="user-label">I am a:</label>
-        <select id="user-type" class="dropdown" onchange="updatePlan()">
-            <option value="delivery">Delivery Rider</option>
-            <option value="commuter">Commuter</option>
-        </select>
-
-        <div id="pricing-plan"></div>
-
-        <div class="offer">
-            <p id="offer-text">🚀 Get 2 WEEKS FREE + 50% Off Per Week Per Rider Referred!</p>
+    <header>
+        <div class="logo">
+            <img src="GlideGo.png" alt="GlideGo Logo">
         </div>
-
-        <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button" target="_blank" id="cta-btn">Sign Up Today!</a>
-    </div>
-
-    <h1>07449 282002</h1>
-
-    <div class="benefits">
-        <h3 id="benefits-title">Why Choose GlideGo?</h3>
-        <ul>
-            <li id="benefit-1">Optional Extra Battery for Delivery Riders £18 pw</li>
-            <li id="benefit-1">📦 Equipment & Accessories Included</li>
-            <li id="benefit-2">🛠️ On-Demand Repairs & Maintenance</li>
-            <li id="benefit-3">🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
-            <li id="benefit-4">💸 Flexible & Affordable Subscription</li>
-            <li id="benefit-5">📍 Home & Office Service Available</li>
-        </ul>
+        <div>
+            <a href="tel:07449282002" class="cta-button">Call Us: 07449 282002</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>E-Bike Rentals & Repairs</h1>
+            <h2>On-demand servicing + Free courtesy E-Bike</h2>
+            <p>For Delivery Riders & Daily Commuters</p>
+            <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button">Sign Up Today!</a>
+        </div>
+        
+        <div class="benefits">
+            <h2>Why Choose GlideGo?</h2>
+            <ul>
+                <li>📦 Equipment & Accessories Included</li>
+                <li>🛠️ On-Demand Repairs & Maintenance</li>
+                <li>🚴‍♂️ Courtesy E-Bike While We Fix Yours</li>
+                <li>💸 Flexible & Affordable Subscription</li>
+                <li>📍 Home & Office Service Available</li>
+            </ul>
+        </div>
     </div>
     
     <div class="footer">
         <p>&copy; 2025 GlideGo. All Rights Reserved.</p>
     </div>
-
-    <script>
-        function updatePlan() {
-            var userType = document.getElementById("user-type").value;
-            var pricingPlan = document.getElementById("pricing-plan");
-
-            if (userType === "delivery") {
-                pricingPlan.innerHTML = 
-                    <h1>📦 Delivery Rider Plan</h1>
-                    <h2>💰 Flexible Plan - £65/week</h2>
-                    <h2>📅 8-Week Plan - £50/week</h2>
-                    <h2>🔐 £150 Refundable Deposit</h2>
-                ;
-            } else {
-                pricingPlan.innerHTML = 
-                    <h1>🚴 Commuter Subscription Plan</h1>
-                   <h2>🛠️ Unlimited Repairs & Free Courtesy Bike - £20/month</h2>
-                ;
-            }
-        }
-
-        function changeLanguage() {
-            var lang = document.getElementById("language").value;
-
-            var translations = {
-                "en": {
-                    title: "E-Bike Rentals",
-                    subtitle: "On-demand servicing + Free courtesy E-Bike",
-                    forWho: "For Delivery Riders & Daily Commuters",
-                    userLabel: "I am a:",
-                    cta: "Join Our Waiting List",
-                    offer: "🚀 Get 2 WEEKS FREE + 50% off to the next 50 sign ups!",
-                    benefitsTitle: "Why Choose GlideGo?",
-                    benefits: [
-                        "📦 Equipment & Accessories Included",
-                        "🛠️ On-Demand Repairs & Maintenance",
-                        "🚴‍♂️ Courtesy E-Bike While We Fix Yours",
-                        "💸 Flexible & Affordable Subscription",
-                        "📍 Home & Office Service Available"
-                    ]
-                },
-                "pt": {
-                    title: "Aluguel de E-Bike",
-                    subtitle: "Serviço sob demanda + Bicicleta cortesia gratuita",
-                    forWho: "Para entregadores e ciclistas diários",
-                    userLabel: "Eu sou um:",
-                    cta: "Junte-se à Nossa Lista de Espera",
-                    offer: "🚀 Ganhe 2 SEMANAS GRATUITAS + 50% de desconto para os próximos 50 inscritos!",
-                    benefitsTitle: "Por que escolher a GlideGo?",
-                    benefits: [
-                        "📦 Equipamento e acessórios incluídos",
-                        "🛠️ Reparos e manutenção sob demanda",
-                        "🚴‍♂️ Bicicleta cortesia enquanto consertamos a sua",
-                        "💸 Assinatura flexível e acessível",
-                        "📍 Serviço disponível em casa e no escritório"
-                    ]
-                }
-            };
-
-            document.getElementById("title").innerText = translations[lang].title;
-            document.getElementById("subtitle").innerText = translations[lang].subtitle;
-            document.getElementById("for-who").innerText = translations[lang].forWho;
-            document.getElementById("user-label").innerText = translations[lang].userLabel;
-            document.getElementById("cta-btn").innerText = translations[lang].cta;
-            document.getElementById("offer-text").innerText = translations[lang].offer;
-            document.getElementById("benefits-title").innerText = translations[lang].benefitsTitle;
-
-            for (let i = 0; i < translations[lang].benefits.length; i++) {
-                document.getElementById("benefit-" + (i + 1)).innerText = translations[lang].benefits[i];
-            }
-        }
-    </script>
 </body>
 </html>
-<script>
-    function updatePlan() {
-        var userType = document.getElementById("user-type").value;
-        var pricingPlan = document.getElementById("pricing-plan");
-
-        if (userType === "delivery") {
-            pricingPlan.innerHTML = `
-                <h1>📦 Delivery Rider Plan</h1>
-                <h2>💰 Flexible Plan - £65/week</h2>
-                <h2>📅 8-Week Plan - £50/week</h2>
-                <h2>🔐 £150 Refundable Deposit</h2>
-            `;
-        } else {
-            pricingPlan.innerHTML = `
-                <h1>🚴 Commuter Plan</h1>
-                <h2>🛠️ Repairs & Courtesy Bike - £20/month</h2>
-            `;
-        }
-    }
-
-    function changeLanguage() {
-        var lang = document.getElementById("language").value;
-
-        var translations = {
-            "en": {
-                title: "E-Bike Rentals",
-                subtitle: "On-demand servicing + Free courtesy E-Bike",
-                forWho: "For Delivery Riders & Daily Commuters",
-                userLabel: "I am a:",
-                cta: "Join Our Waiting List",
-                offer: "🚀 Get 2 WEEKS FREE + 50% off to the next 50 sign ups!",
-                benefitsTitle: "Why Choose GlideGo?",
-                benefits: [
-                    "📦 Equipment & Accessories Included",
-                    "🛠️ On-Demand Repairs & Maintenance",
-                    "🚴‍♂️ Courtesy E-Bike While We Fix Yours",
-                    "💸 Flexible & Affordable Subscription",
-                    "📍 Home & Office Service Available"
-                ]
-            },
-            "pt": {
-                title: "Aluguel de E-Bike",
-                subtitle: "Serviço sob demanda + Bicicleta cortesia gratuita",
-                forWho: "Para entregadores e ciclistas diários",
-                userLabel: "Eu sou um:",
-                cta: "Junte-se à Nossa Lista de Espera",
-                offer: "🚀 Ganhe 2 SEMANAS GRATUITAS + 50% de desconto para os próximos 50 inscritos!",
-                benefitsTitle: "Por que escolher a GlideGo?",
-                benefits: [
-                    "📦 Equipamento e acessórios incluídos",
-                    "🛠️ Reparos e manutenção sob demanda",
-                    "🚴‍♂️ Bicicleta cortesia enquanto consertamos a sua",
-                    "💸 Assinatura flexível e acessível",
-                    "📍 Serviço disponível em casa e no escritório"
-                ]
-            },
-            "hi": {
-                title: "ई-बाइक किराया",
-                subtitle: "ऑन-डिमांड सेवा + मुफ्त शिष्टाचार ई-बाइक",
-                forWho: "डिलीवरी राइडर्स और दैनिक यात्रियों के लिए",
-                userLabel: "मैं हूँ:",
-                cta: "हमारी प्रतीक्षा सूची में शामिल हों",
-                offer: "🚀 2 सप्ताह मुफ्त + अगले 50 साइन-अप पर 50% छूट!",
-                benefitsTitle: "ग्लाइडगो क्यों चुनें?",
-                benefits: [
-                    "📦 उपकरण और सहायक उपकरण शामिल",
-                    "🛠️ ऑन-डिमांड मरम्मत और रखरखाव",
-                    "🚴‍♂️ आपकी मरम्मत के दौरान शिष्टाचार ई-बाइक",
-                    "💸 लचीली और सस्ती सदस्यता",
-                    "📍 घर और कार्यालय सेवा उपलब्ध"
-                ]
-            },
-            "es": {
-                title: "Alquiler de E-Bikes",
-                subtitle: "Servicio bajo demanda + Bicicleta de cortesía gratuita",
-                forWho: "Para repartidores y viajeros diarios",
-                userLabel: "Soy un:",
-                cta: "Únete a nuestra lista de espera",
-                offer: "🚀 ¡Obtén 2 SEMANAS GRATIS + 50% de descuento para los próximos 50 registros!",
-                benefitsTitle: "¿Por qué elegir GlideGo?",
-                benefits: [
-                    "📦 Equipamiento y accesorios incluidos",
-                    "🛠️ Reparaciones y mantenimiento bajo demanda",
-                    "🚴‍♂️ Bicicleta de cortesía mientras arreglamos la tuya",
-                    "💸 Suscripción flexible y asequible",
-                    "📍 Servicio disponible en casa y oficina"
-                ]
-            }
-        };
-
-        if (!translations[lang]) {
-            console.error("Language not supported:", lang);
-            return;
-        }
-
-        document.getElementById("title").innerText = translations[lang].title;
-        document.getElementById("subtitle").innerText = translations[lang].subtitle;
-        document.getElementById("for-who").innerText = translations[lang].forWho;
-        document.getElementById("user-label").innerText = translations[lang].userLabel;
-        document.getElementById("cta-btn").innerText = translations[lang].cta;
-        document.getElementById("offer-text").innerText = translations[lang].offer;
-        document.getElementById("benefits-title").innerText = translations[lang].benefitsTitle;
-
-        for (let i = 0; i < translations[lang].benefits.length; i++) {
-            document.getElementById("benefit-" + (i + 1)).innerText = translations[lang].benefits[i];
-        }
-    }
-</script>
