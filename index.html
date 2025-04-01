@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <img src="GlideGo.png" alt="GlideGo Logo">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlideGo - E-Bike Solutions</title>
+    <title>GlideGo - Premium Bike Servicing</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,19 +30,11 @@
             transition: 0.3s;
             display: inline-block;
             text-decoration: none;
+            border-radius: 5px;
         }
         .cta-button:hover {
             background-color: #89b46f;
             transform: scale(1.05);
-        }
-        .dropdown {
-            margin: 20px auto;
-            padding: 10px;
-            font-size: 18px;
-            background-color: #2a2827;
-            color: white;
-            border: none;
-            text-align: center;
         }
         .container {
             max-width: 900px;
@@ -51,66 +42,73 @@
             padding: 20px;
         }
         .plan-details {
-            display: none;
             background-color: #2a2827;
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
         }
+        .ebike-image {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .testimonial-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #1a1919;
+            border-radius: 10px;
+        }
+        .testimonial {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .video-container {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
+
     <div class="hero">
-        <h1>GlideGo - E-Bike Solutions</h1>
-        <label for="user-type">Choose Your Plan:</label>
-        <select id="user-type" class="dropdown" onchange="updatePlan()">
-            <option value="Option">Choose</option>
-            <option value="delivery">Delivery Rider Rental</option>
-            <option value="commuter">Commuter Mobile Servicing</option>
-        </select>
+        <img src="GlideGo.png" alt="GlideGo Logo" width="200">
+        <h1>Premium E-Bike Servicing</h1>
+        <p>🚴‍♂️ Never let a breakdown ruin your day again. Fast, hassle-free, zero downtime.</p>
     </div>
 
-    <div id="delivery-plan" class="plan-details">
-        <h2>Delivery Rider Plan</h2>
-        <p>🚀 Limited Availability! Secure Your E-Bike Today!</p>
-        <p>💰 £50/week (Drops to £45/week after 8 weeks!)</p>
-        <p>📦 What's Included:</p>
-        <ul>
-            <li>16Ah Battery</li>
-            <li>Optional Extra Battery (£15/week)</li>
-            <li>GPS Tracking</li>
-            <li>Phone Holder</li>
-            <li>Rear Topbox</li>
-            <li>Optional Helmet</li>
-            <li>Optional Handlebar Gloves</li>
-            <li>Secure Lock</li>
-        </ul>
-        <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button" target="_blank">Get Started Now</a>
-
-  <h3>*Engwe EP-2 Pro*</h3>
-        <img src="Engwe straight black.png" alt="E-Bike with advertisement" class="ebike-image">
-        
+    <!-- Video Section (Insert Your Video URL) -->
+    <div class="video-container">
+        <p><strong>Welcome to GlideGo:</strong></p>
+        <video width="90%" controls>
+            <source src="your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
-    <div id="commuter-plan" class="plan-details">
-        <h2>Commuter Mobile Servicing</h2>
-        <p>⏳ 🚴 Time is everything. One breakdown can ruin your entire day.</p>
-⚡ Fast. Hassle-Free. Zero downtime. Your time is too valuable to be spent waiting.</p>
-        <p>🚲 Instant Fix. Temporary E-Bike Swap. No Time Lost.</p>
-        <p>🛠️ Open the app → Press a button → A specialist arrives ASAP</p>
-        <p>🔄 Get a premium courtesy e-bike while we repair yours</p>
-        <p>📍 We return later and swap it back.</p>
-        <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button" target="_blank">Sign Up Now</a>
-        <h3>*Engwe EP-2 Pro*</h3>
-        <img src="Engwe straight black.png" alt="E-Bike with advertisement" class="ebike-image">
+    <div class="container">
+        <div class="plan-details">
+            <h2>How It Works</h2>
+            <p>⏳ **Time is everything.** A breakdown can disrupt your entire day.</p>
+            <p>🛠️ **Instant Fix.** Temporary E-Bike Swap. No time lost.</p>
+            <p>📍 Open the app → Press a button → A specialist arrives ASAP.</p>
+            <p>🚲 Get a premium courtesy e-bike while we repair yours.</p>
+            <p>🔄 We return later and swap it back.</p>
+            <a href="https://forms.gle/NngZ7xqK1okPz3KRA" class="cta-button" target="_blank">Sign Up Now</a>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonial-section">
+            <h2>What Our Customers Say</h2>
+            <p class="testimonial">"GlideGo saved me when my chain snapped before work. Within 15 minutes, I was riding again!" - Alex M.</p>
+            <p class="testimonial">"No more stress about breakdowns. I just ride, and GlideGo handles the rest." - Sarah K.</p>
+            <p class="testimonial">"The convenience is unmatched. Absolute game-changer!" - Tom R.</p>
+        </div>
+
+        <!-- Bike Image (Scaled for Mobile) -->
+        <h3>*Your Courtesy E-Bike: Engwe EP-2 Pro*</h3>
+        <img src="Engwe_straight_black.png" alt="E-Bike" class="ebike-image">
     </div>
 
-    <script>
-        function updatePlan() {
-            var userType = document.getElementById("user-type").value;
-            document.getElementById("delivery-plan").style.display = userType === "delivery" ? "block" : "none";
-            document.getElementById("commuter-plan").style.display = userType === "commuter" ? "block" : "none";
-        }
-    </script>
 </body>
 </html>
