@@ -1,224 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlideGo | Instant Bike Breakdown Rescue</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlideGo | Instant Bike Rescue</title>
 
-     <!-- Google Analytics Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTMXDRJ6VT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTMXDRJ6VT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KTMXDRJ6VT');
+  </script>
 
-        gtag('config', 'G-KTMXDRJ6VT'); // Replace with your Google Analytics ID
-    </script>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #231f20;
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .hero {
-            padding: 60px 10px;
-            background-color: #231f20;
-        }
-        .cta-button {
-            background: linear-gradient(90deg, #acda5a, #89b46f);
-            color: #231f20;
-            padding: 15px 30px;
-            font-size: 20px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            margin-top: 20px;
-            transition: 0.3s;
-            display: inline-block;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .cta-button:hover {
-            background-color: #89b46f;
-            transform: scale(1.05);
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .section {
-            margin-top: 40px;
-        }
-        .vanbikes-image, .app-image {
-            width: 80%;
-            max-width: 400px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-        .testimonial-section {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #1a1919;
-            border-radius: 10px;
-        }
-        .testimonial-box {
-            background: #2a2827;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-        .stars {
-            color: gold;
-        }
-        .contact-us {
-            margin-top: 40px;
-        }
-        .benefitsgrid-image {
-            width: 65%;
-            max-width: 1000px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-    </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #231f20;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .hero, .section {
+      padding: 60px 10px;
+    }
+    .cta-button {
+      background: linear-gradient(90deg, #acda5a, #89b46f);
+      color: #231f20;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background-color: #89b46f;
+      transform: scale(1.05);
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #2a2827;
+      border-radius: 16px;
+      margin: 40px 0;
+    }
+    .pricing-option {
+      background: #1a1919;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .pricing-option h3 {
+      color: #acda5a;
+      margin-bottom: 1rem;
+    }
+    .section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .testimonial-section {
+      background-color: #1a1919;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .testimonial-box {
+      background: #2a2827;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .stars {
+      color: gold;
+    }
+  </style>
 </head>
 <body>
 
-<h2 style="color:#acda5a;">✅ Success! Your free guide is on the way.</h2>
-<p>While you wait... here’s how to eliminate bike breakdowns forever:</p>
-    
-    
-    <div class="hero">
-        <img src="GlideGo.png" alt="GlideGo Logo" width="200">
-        <h1>Instant Bike Breakdown Rescue — Or You Ride Free For 6 Months</h1>
-        <h2>GlideGo Service Vans. 10 Minute Arrival. Instant E-Bike Swaps. — anywhere in London, 24/7.</h2>
-
-<style>
-  .pricing-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    border: 2px solid #444;
-    border-radius: 16px;
-    max-width: 900px;
-    margin: 0 auto 40px;
-    background-color: #2a2827;
-  }
-
-  .pricing-option {
-    border: 1px solid #555;
-    border-radius: 12px;
-    padding: 2rem 1rem;
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
-    background-color: #1a1919;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-
-  .pricing-option h3 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #acda5a;
-  }
-
-  .pricing-option .cta-button {
-    background: linear-gradient(90deg, #acda5a, #89b46f);
-    color: #231f20;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-top: 20px;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  .pricing-option .cta-button:hover {
-    background-color: #89b46f;
-    transform: scale(1.05);
-  }
-</style>
-
-<div class="pricing-container">
-  <!-- Commuter Pack -->
-  <div class="pricing-option">
-    <h3>GlideGo Commuter Pack – £20/mo</h3>
-    <a href="https://tally.so/r/m652YB" class="cta-button">
-      Join Now
-    </a>
+  <div class="hero">
+    <img src="GlideGo.png" alt="GlideGo Logo" width="150">
+    <h1>Get Rescued or Ride Free for 6 Months</h1>
+    <h2>London's Instant E-Bike Breakdown Rescue</h2>
+    <a class="cta-button" href="https://tally.so/r/m652YB">Start for £0 Today</a>
   </div>
 
-  <!-- Corporate Pack -->
-  <div class="pricing-option">
-    <h3>GlideGo Corporate Pack</h3>
-    <a href="mailto:contact.glidego@gmail.com?subject=Corporate%20Enquiry%20for%20GlideGo%20Pack" class="cta-button">
-      Enquire Now
-    </a>
-  </div>
-</div>
-
- <div class="section">
-            <h2>The GlideGo App (Coming Soon)</h2>
-            <img src="App Launch Your Story in Black Bright Green Cool Corporate Style (1).png" alt="GlideGo App Preview" class="app-image">
-            <p>Simple. Powerful. One tap to get rescued wherever you are.</p>
-        </div>
-    
-    <div class="container">
-        
-        <div class="section">
-            <h2>What You Get:</h2>
-           <img src="benefits.png" alt="grid" class="benefitsgrid-image">
-        </div>
-
-        <h3>All This — From Just £20/Month</h3>
-<p>And it means you never have to worry about being stranded again. Plus, if we don’t show up fast — <strong>you ride free for 6 months.</strong></p>
-
-
-        <div class="section testimonial-section">
-            <h2>Our Riders Say It Best</h2>
-            <div class="testimonial-box">
-                <p class="stars">★★★★★</p>
-                <p>"GlideGo saved me when my chain snapped before work. They swapped my bike for the day and i was riding again!" - Alex M.</p>
-            </div>
-            <div class="testimonial-box">
-                <p class="stars">★★★★★</p>
-                <p>"No more stress about breakdowns.. I just ride and GlideGo handles the rest." - Sarah K.</p>
-            </div>
-            <div class="testimonial-box">
-                <p class="stars">★★★★★</p>
-                <p>"The convenience is unmatched. Absolute game changer!" - Tom R.</p>
-            </div>
-        </div>
-
-<div class="section">
-    <h2>Why GlideGo Exists</h2>
-    <p>We built GlideGo because traditional bike repair shops simply don’t work for today’s busy cyclists. When your bike breaks, you're stuck. You waste time, lose momentum, and risk being late. We hated that. So we flipped the model.</p>
-    <p>Instead of making you come to us — we come to you. Instead of waiting days — you’re moving again in minutes. Our mission is simple: <strong>no more downtime for cyclists. Ever.</strong></p>
-</div>
-
-        
-        <div class="section contact-us">
-            <h2>Need Help?</h2>
-            <p>We're open 24/7 to support you.</p>
-            <p><strong>Email:</strong> contact.glidego@gmail.com</p>
-        </div>
-
+  <div class="container">
+    <div class="pricing-container">
+      <div class="pricing-option">
+        <h3>Commuter Pack – £20/mo</h3>
+        <p>Unlimited rescues, repairs, instant swaps</p>
+        <a class="cta-button" href="https://tally.so/r/m652YB">Join Now</a>
+      </div>
+      <div class="pricing-option">
+        <h3>Corporate Pack</h3>
+        <p>Team-wide support + ESG benefits</p>
+        <a class="cta-button" href="mailto:contact.glidego@gmail.com">Enquire</a>
+      </div>
     </div>
 
+    <div class="section">
+      <h2>Everything You Get</h2>
+      <ul style="text-align:left; max-width:600px; margin:0 auto;">
+        <li>🚐 Instant Van Dispatch (Avg Arrival: 10 min)</li>
+        <li>🔁 Premium E-Bike Swap On The Spot</li>
+        <li>🔧 Unlimited Servicing, Repairs & Parts</li>
+        <li>📱 GlideGo App (Coming Soon)</li>
+        <li>🌱 ESG-aligned, Electric Fleet</li>
+        <li>🕒 24/7 Coverage — Even Weekends</li>
+      </ul>
+      <img src="benefits.png" alt="GlideGo Benefits">
+      <h3>Only £20/month — Peace of Mind, Anytime</h3>
+    </div>
+
+    <div class="testimonial-section">
+      <h2>What Riders Say</h2>
+      <div class="testimonial-box">
+        <p class="stars">★★★★★</p>
+        <p>"They saved my commute. Chain snapped, and in 10 min, I had a new bike." — Alex M.</p>
+      </div>
+      <div class="testimonial-box">
+        <p class="stars">★★★★★</p>
+        <p>"No stress about breakdowns anymore. Game changer." — Sarah K.</p>
+      </div>
+      <div class="testimonial-box">
+        <p class="stars">★★★★★</p>
+        <p>"They came to my office and fixed everything on the spot." — Tom R.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>The 10-Minute Rescue Guarantee</h2>
+      <p>If we don't reach you in 10 minutes — you ride free for 6 months.</p>
+    </div>
+
+    <div class="section">
+      <h2>Why GlideGo?</h2>
+      <p>Traditional bike repair is slow, stressful, and outdated. GlideGo flips the model — instant van dispatch, e-bike swaps, and zero downtime.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact Us</h2>
+      <p>💬 Email us: <a href="mailto:contact.glidego@gmail.com">contact.glidego@gmail.com</a></p>
+      <p>We're here 24/7, even on weekends.</p>
+    </div>
+  </div>
 </body>
 </html>
