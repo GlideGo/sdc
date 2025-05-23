@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>GlideGo | Instant Bike Rescue</title>
 
   <!-- Google Analytics -->
@@ -24,7 +24,10 @@
       text-align: center;
     }
     .hero, .section {
-      padding: 60px 10px;
+      padding: 40px 10px;
+    }
+    .section + .section {
+      margin-top: 20px;
     }
     .cta-button {
       background: linear-gradient(90deg, #acda5a, #89b46f);
@@ -39,6 +42,8 @@
       transition: 0.3s;
       text-decoration: none;
       display: inline-block;
+      width: 90%;
+      max-width: 300px;
     }
     .cta-button:hover {
       background-color: #89b46f;
@@ -75,18 +80,18 @@
       border-radius: 10px;
       margin-top: 20px;
     }
-    .GlideGo App Preview, .app-image {
-            width: 80%;
-            max-width: 400px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+    .app-image {
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
     .testimonial-section {
       background-color: #1a1919;
       border-radius: 10px;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 30px 10px;
+      margin-top: 20px;
     }
     .testimonial-box {
       background: #2a2827;
@@ -102,12 +107,12 @@
 <body>
 
   <h2 style="color:#acda5a;">✅ Success! Your free guide is on the way.</h2>
-<p>While you wait... here’s how to eliminate bike breakdowns forever:</p>
-  
+  <p>While you wait... here’s how to eliminate bike breakdowns forever:</p>
+
   <div class="hero">
-    <img src="GlideGo.png" alt="GlideGo Logo" width="150">
-    <h1>Get Rescued or Ride Free for 6 Months</h1>
-    <h2>London's Instant E-Bike Breakdown Rescue</h2>
+    <img src="GlideGo.png" alt="GlideGo Logo" width="120" style="margin-bottom: 20px;">
+    <h1>Stuck? We’ll Rescue You in 10 Min — Or Your Next 6 Months Are Free</h1>
+    <h2 style="margin-top: 10px;">London's Fastest E-Bike Breakdown Response</h2>
     <a class="cta-button" href="https://tally.so/r/m652YB">Join the GlideGo Movement</a>
   </div>
 
@@ -125,17 +130,18 @@
       </div>
     </div>
 
-     <div class="section">
-            <h2>The GlideGo App (Coming Soon)</h2>
-            <img src="App Launch Your Story in Black Bright Green Cool Corporate Style (1).png" alt="GlideGo App Preview" class="app-image">
-            <p>Simple. Powerful. One tap to get rescued wherever you are.</p>
-        </div>
+    <div class="section">
+      <h2>The GlideGo App (Coming Soon)</h2>
+      <img src="App Launch Your Story in Black Bright Green Cool Corporate Style (1).png" alt="GlideGo App Preview" class="app-image">
+      <p>Simple. Powerful. One tap to get rescued wherever you are.</p>
+    </div>
 
     <div class="section">
       <h2>What You Get</h2>
-      <ul style="text-align:left; max-width:600px; margin:0 auto;">
-      <img src="benefits.png" alt="GlideGo Benefits">
-      <h3>Only £20/month — Peace of Mind, Anytime</h3>
+      <div style="text-align: center;">
+        <img src="benefits.png" alt="GlideGo Benefits" style="width: 90%; max-width: 400px; margin: 0 auto; display: block;">
+        <h3 style="margin-top: 10px;">Only £20/month — Peace of Mind, Anytime</h3>
+      </div>
     </div>
 
     <div class="testimonial-section">
@@ -170,5 +176,6 @@
       <p>We're here 24/7, even on weekends.</p>
     </div>
   </div>
+
 </body>
 </html>
