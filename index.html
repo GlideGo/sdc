@@ -73,23 +73,33 @@ src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1"
       margin-bottom: 40px;
       font-size: 1rem;
     }
-    .cta-button {
-      background: linear-gradient(90deg, #acda5a, #89b46f);
-      color: #231f20;
-      padding: 15px 0;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 10px 5px 0 5px;
-      transition: 0.3s;
-      text-decoration: none;
-      display: inline-block;
-      width: 140px;
-      max-width: 45vw;
-      box-sizing: border-box;
-    }
+.cta-button {
+  background: linear-gradient(90deg, #acda5a, #89b46f);
+  color: #231f20;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 5px 0 5px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .cta-button {
+    width: 90vw;
+    font-size: 1rem;
+    padding: 12px 0;
+    display: block;
+    margin: 12px auto;
+  }
+}
     .cta-button:hover {
       background-color: #89b46f;
       transform: scale(1.05);
@@ -245,6 +255,14 @@ src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1"
         <h3 style="margin-top: 10px;">Only £20/month — Peace of Mind, Anytime</h3>
       </div>
     </div>
+
+    <div style="background: #2a2827; padding: 20px 10px; margin-top: -20px;">
+  <h2 style="color: #f44336; font-size: 1.4rem;">⚠️ Only 4 Spots Left at £10/mo for 6 Months</h2>
+  <p style="color: white; max-width: 600px; margin: 0 auto;">
+    We're nearly full — this launch discount is about to close. If you're commuting by bike in London, now is the time to secure your slot and get protected.
+  </p>
+  <a class="cta-button" href="https://tally.so/r/m652YB" style="margin-top: 20px;">Claim My Discount</a>
+</div>
 
     <div class="testimonial-section">
       <h2>What Riders Say</h2>
