@@ -255,6 +255,39 @@ src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1"
       </div>
     </div>
 
+    <div style="text-align: center; padding: 20px; background: #fff8e1; border: 2px solid #ffc107; border-radius: 10px; font-family: Arial, sans-serif;">
+  <h2 style="color: #d32f2f; margin-bottom: 10px;">🎯 Limited Time Offer:</h2>
+  <h3 style="color: #000; font-weight: bold;">Your First Rescue – Completely FREE 🚴‍♂️</h3>
+  <p style="font-size: 16px; margin-bottom: 20px;">Sign up before <strong>June 15th</strong> to claim your free emergency bike rescue.</p>
+  
+  <div id="countdown" style="font-size: 24px; font-weight: bold; color: #d32f2f;"></div>
+</div>
+
+<script>
+  // Set the deadline date
+  const countDownDate = new Date("June 15, 2025 23:59:59").getTime();
+
+  const countdown = document.getElementById("countdown");
+
+  const x = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    if (distance < 0) {
+      clearInterval(x);
+      countdown.innerHTML = "⏳ Offer expired!";
+    } else {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left!`;
+    }
+  }, 1000);
+</script>
+
+
     <div class="section">
       <h2>The GlideGo App (Coming Soon)</h2>
       <img
@@ -273,14 +306,6 @@ src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1"
         <h3 style="margin-top: 10px;">Only £20/month — Peace of Mind, Anytime</h3>
       </div>
     </div>
-
-    <div style="background: #2a2827; padding: 20px 10px; margin-top: -20px;">
-  <h2 style="color: #f44336; font-size: 1.4rem;">⚠️ Only 2 Spots Left at £10/mo for your first 6 Months</h2>
-  <p style="color: white; max-width: 600px; margin: 0 auto;">
-    Secure your slot and get protected.
-  </p>
-  <a class="cta-button" href="https://wa.me/447449282002?text=Hey%20I’m%20claiming%20my%20discount!" style="margin-top: 20px;">Claim My Discount</a>
-</div>
 
     <div class="testimonial-section">
       <h2>What Riders Say</h2>
