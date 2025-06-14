@@ -6,24 +6,22 @@
   <title>GlideGo | Instant Bike Rescue</title>
 
   <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1744426926424680');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1744426926424680');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1" /></noscript>
 
-   <!-- Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTMXDRJ6VT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,377 +31,144 @@ src="https://www.facebook.com/tr?id=1744426926424680&ev=PageView&noscript=1"
   </script>
 
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #231f20;
-    color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    line-height: 1.4;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #231f20;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      line-height: 1.4;
+    }
 
-  .hero, .section {
-    padding: 40px 10px;
-  }
+    .hero, .section {
+      padding: 40px 10px;
+    }
 
-  .section + .section {
-    margin-top: 20px;
-  }
+    h1, h2, h3, h4 {
+      margin: 0.5em 0;
+    }
 
-  h1 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin: 0.4em 0 0.1em;
-    line-height: 1.2;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin: 0.2em 0 1em;
-    font-weight: normal;
-    color: #acda5a;
-  }
-
-  h4 {
-    font-size: 1.0rem;
-    margin: 0.2em 0 1em;
-    font-weight: normal;
-    color: #FFFFFF;
-  }
-
-  #success-message {
-    color: #acda5a;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin-top: 20px;
-    display: none;
-  }
-
-  #success-subtext {
-    color: white;
-    margin-bottom: 40px;
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    background: linear-gradient(90deg, #acda5a, #89b46f);
-    color: #231f20;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 12px auto;
-    transition: 0.3s;
-    text-decoration: none;
-    display: block;
-    max-width: 90%;
-    box-sizing: border-box;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-  }
-
-  .cta-button:hover {
-    background-color: #89b46f;
-    transform: scale(1.05);
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  .pricing-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: #2a2827;
-    border-radius: 16px;
-    margin: 40px 0;
-  }
-
-  .pricing-option {
-    background: #1a1919;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 300px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    flex: 1 1 280px;
-    box-sizing: border-box;
-  }
-
-  .pricing-option h3 {
-    color: #acda5a;
-    margin-bottom: 1rem;
-  }
-
-  .section img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-
-  .app-image {
-    width: 90%;
-    max-width: 500px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-
-   /* Benefits image bigger on mobile */
-      #benefits-features-grid.png {
-        max-width: 90vw;
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-  .testimonial-section {
-    background-color: #1a1919;
-    border-radius: 10px;
-    padding: 30px 10px;
-    margin-top: 20px;
-  }
-
-  .testimonial-box {
-    background: #2a2827;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 10px 0;
-  }
-
-  .stars {
-    color: gold;
-    margin-bottom: 8px;
-  }
-
-  /* MOBILE */
-  @media (max-width: 600px) {
     h1 {
-      font-size: 1.5rem;
-      padding: 0 10px;
+      font-size: 2.2rem;
+      font-weight: bold;
     }
 
     h2 {
+      font-size: 1.5rem;
+      color: #acda5a;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #acda5a, #89b46f);
+      color: #231f20;
+      padding: 15px 20px;
       font-size: 1.2rem;
-      padding: 0 10px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 12px auto;
+      transition: 0.3s;
+      display: block;
+      max-width: 90%;
+      text-decoration: none;
     }
 
-    .pricing-container {
-      flex-direction: column;
-      padding: 1rem;
+    .cta-button:hover {
+      transform: scale(1.05);
     }
 
-    .pricing-option {
-      max-width: 100%;
-      padding: 1.5rem;
-      margin: 0 auto;
+    .how-it-works-container {
+      background-color: #1e1e1e;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 900px;
     }
 
-    #benefits-image {
-      max-width: 90vw;
-      width: 100%;
-      margin-bottom: 20px;
+    .how-it-works-step {
+      background-color: #2e2e2e;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      text-align: left;
     }
-  }
-</style>
 
+    .how-it-works-step strong {
+      display: block;
+      font-size: 1.2rem;
+      color: #acda5a;
+      margin-bottom: 10px;
+    }
+
+    .how-it-works-step p {
+      margin: 0;
+      color: #e0e0e0;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #444;
+      margin: 30px 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .how-it-works-step {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Success message (hidden by default, shown only if URL param present) -->
-  <div id="success-message">
-    ✅ Success! Your free guide is on the way.
-  </div>
-  <p id="success-subtext" style="display:none;">
-    While you wait... here’s how to eliminate bike breakdowns forever:
-  </p>
-
-  <div class="hero">
-    <img src="GlideGo.png" alt="GlideGo Logo" width="120" style="margin-bottom: 20px;" />
-    <h1>Bike Broke Down? We'll reach you ASAP</h1>
-    
-    <h2>London's Mobile Bike Support</h2>
-
-     <div style="text-align: center; padding: 20px; background: #fff8e1; border: 2px solid #ffc107; border-radius: 10px; font-family: Arial, sans-serif;">
-  <h2 style="color: #d32f2f; margin-bottom: 10px;">🎯 Limited Time Offer:</h2>
-  <h3 style="color: #000; font-weight: bold;">Your First Rescue – Completely FREE 🚴‍♂️</h3>
- <p style="color: #000; style="font-size: 16px; margin-bottom: 20px;">
-  Sign up before 
-  <strong>
-    <span style="color: #ff5722;">June 15th</span>
-  </strong>
-  to claim your free emergency bike rescue.
-</p>
-<a class="cta-button" href="https://wa.me/447449282002?text=Hey%20I’m%20claiming%20my%20free%20rescue!">Claim!</a>
-      </div>
-     <div id="countdown" style="font-size: 24px; font-weight: bold; color: #d32f2f;"></div>
+<div class="hero">
+  <h1>Bike Broke Down? We'll reach you ASAP</h1>
+  <h2>London's Mobile Bike Support</h2>
+  <a class="cta-button" href="https://wa.me/447449282002?text=Hey%20I’m%20claiming%20my%20free%20rescue!">Claim Your Free Rescue</a>
 </div>
 
-  
-<script>
-  // Set the deadline date
-  const countDownDate = new Date("June 15, 2025 23:59:59").getTime();
+<div class="how-it-works-container">
+  <h2>🚴‍♂️ How It Works</h2>
 
-  const countdown = document.getElementById("countdown");
-
-  const x = setInterval(function () {
-    const now = new Date().getTime();
-    const distance = countDownDate - now;
-
-    if (distance < 0) {
-      clearInterval(x);
-      countdown.innerHTML = "⏳ Offer expired!";
-    } else {
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left!`;
-    }
-  }, 1000);
-</script>
-
-<section style="font-family: sans-serif; line-height: 1.6; padding: 1em;">
-  <h2>🚴‍♂️ <strong>How It Works</strong></h2>
-
-  <p><strong>1. You Break Down</strong><br>
-
-  <p><strong>2. We Arrive Fast</strong><br>
-  <strong>ETA by Zone:</strong><br>
-  – <strong>10–20 mins</strong> in Zones <strong>1–2</strong><br>
-  – <strong>20–40 mins</strong> in Zones <strong>3–4</strong></p>
-
-  <p><strong>3. We Fix On-Site</strong><br>
-  Our mechanic gets you rolling again – right there, on the spot.</p>
-
-  <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;">
-
-  <h3>💡 <strong>Can’t Wait? No Problem.</strong></h3>
-
-  <ul>
-    <li>🔐 <strong>Lock your bike safely on the spot</strong></li>
-    <li>🚐 <strong>We collect it</strong></li>
-    <li>🛠 <strong>We repair it and deliver it to your workplace</strong></li>
-    <li>🚲 Or <strong>we drop off a temporary e-bike swap</strong> so you’re not delayed</li>
-  </ul>
-
-  <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;">
-
-  <p><strong>Zones 1–2:</strong> We’ll come <em>with your temporary E-Bike replacement</em> and collect the broken one – no downtime.</p>
-
-  <p><strong>Zones 3–4:</strong> Lock your bike safely. We’ll retrieve, repair, and either:</p>
-
-  <ul>
-    <li>Return it to your workplace <strong>OR</strong></li>
-    <li>Deliver a temporary e-bike, and later swap back with your fixed one</li>
-  </ul>
-
-  <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;">
-
-  <p>✅ <strong>No extra fees.</strong><br>
-     ✅ <strong>No surprises.</strong><br>
-     ✅ <strong>Just reliable, fast support – when and where you need it most.</strong></p>
-</section>
-
-  
-  <div class="container">
-    <div class="pricing-container">
-      <div class="pricing-option">
-        <h3>Commuter Pack – £20/mo</h3>
-        <p>Instant bike swaps, Unlimited Rescues</p>
-        <a class="cta-button" href="https://wa.me/447449282002?text=Hey%20I’m%20interested%20in%20GlideGo!">WhatsApp Us!</a>
-      </div>
-      <div class="pricing-option">
-        <h3>Corporate Pack</h3>
-        <p>Team-wide support</p>
-        <a class="cta-button" href="mailto:contact.glidego@gmail.com">Enquire</a>
-      </div>
-    </div>
-    
-    <div class="section">
-      <h2>The GlideGo App (Coming Soon)</h2>
-      <img
-        src="App Launch Your Story in Black Bright Green Cool Corporate Style (1).png"
-        alt="GlideGo App Preview"
-        class="app-image"
-      />
-      <p>Simple. Powerful. One tap to get rescued wherever you are.</p>
-    </div>
-
-    <div class="section">
-      <h2>What You Get</h2>
-      <div style="text-align: center;">
-        <img id="benefits-image" src="benefit-features-grid.png" alt="GlideGo Benefits" />
-  </div>
-        <h3 style="margin-top: 10px;">Only £20/month — Peace of Mind, Anytime</h3>
-      </div>
-    </div>
-
-    <div class="testimonial-section">
-      <h2>What Riders Say</h2>
-      <div class="testimonial-box">
-        <p class="stars">★★★★★</p>
-        <p>"They saved my commute. Chain snapped, and in 10 min, I had a new bike." — Alex M.</p>
-      </div>
-      <div class="testimonial-box">
-        <p class="stars">★★★★★</p>
-        <p>"No stress about breakdowns anymore. Game changer." — Sarah K.</p>
-      </div>
-      <div class="testimonial-box">
-        <p class="stars">★★★★★</p>
-        <p>"They came to my office and fixed everything on the spot." — Tom R.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Why GlideGo?</h2>
-
-      <p><strong>It started with a breakdown.</strong></p>
-
-      <p>One morning, my buddy’s e-bike gave up mid-commute. No bike shops were open. Taxis wouldn’t take the bike. He was stranded — cold, frustrated, and late for work.</p>
-
-      <p>That sparked a question:<br /><em>Why is bike rescue still stuck in the past?</em></p>
-
-      <p>Cars have AA. Phones have AppleCare. But cyclists? Nothing.</p>
-
-      <p><strong>We built GlideGo to change that.</strong></p>
-
-      <p>Not just with repairs — but with speed, simplicity, and a real backup system that actually shows up.</p>
-
-      <p><strong>Our mission is simple:</strong><br />Never let a breakdown break your day.</p>
-
-      <p>We dispatch rescue vans with full-service toolkits and replacement e-bikes — 7 days a week, on demand.</p>
-
-      <p>Whether your chain snaps, tyre bursts, or battery dies, we get you moving again in minutes, not hours.</p>
-
-      <p><strong>With GlideGo, commuting becomes stress-free.</strong><br />No more waiting. No more worry. Just ride.</p>
-    </div>
-
-    <div class="section">
-      <h2>Contact Us</h2>
-      <p>Email us: <a href="mailto:contact.glidego@gmail.com">contact.glidego@gmail.com</a></p>
-      <p>We're here 24/7, even on weekends.</p>
-    </div>
+  <div class="how-it-works-step">
+    <strong>1. You Break Down</strong>
+    <p>Flat tyre? Dead battery? Chain snapped? No stress.</p>
   </div>
 
-  <script>
-    // Show success message only if ?optin=success is in URL
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("optin") === "success") {
-        document.getElementById("success-message").style.display = "block";
-        document.getElementById("success-subtext").style.display = "block";
-      }
-    });
-  </script>
+  <div class="how-it-works-step">
+    <strong>2. We Arrive Fast</strong>
+    <p><strong>Zones 1–2:</strong> 10–20 mins<br><strong>Zones 3–4:</strong> 20–40 mins</p>
+  </div>
+
+  <div class="how-it-works-step">
+    <strong>3. We Fix It On-Site</strong>
+    <p>We get you rolling right there – or swap you onto a replacement e-bike.</p>
+  </div>
+
+  <div class="how-it-works-step">
+    <strong>Need to Leave the Bike?</strong>
+    <ul>
+      <li>🔐 Lock your bike</li>
+      <li>🚐 We collect and repair it</li>
+      <li>🏢 Deliver it to your workplace or swap it for a temp ride</li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 20px; color: #acda5a; font-weight: bold;">✅ No extra fees. Just fast, reliable rescue – when you need it most.</p>
+</div>
+
 </body>
 </html>
