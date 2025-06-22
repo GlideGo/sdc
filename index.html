@@ -225,28 +225,28 @@
   </div>
 
   <script>
-    // Countdown Timer
-    const targetDate = new Date('2025-06-29T23:59:59');
+// Set a fixed deadline (7 days from a known launch date)
+const targetDate = new Date('2025-06-24T23:59:59'); // Example fixed deadline
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate.getTime() - now;
 
-      if (distance <= 0) {
-        countdownElement.innerHTML = "Offer expired.";
-        return;
-      }
+  if (distance <= 0) {
+    countdownElement.innerHTML = "Offer expired.";
+    return;
+  }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
-    }
+  countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+}
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+setInterval(updateCountdown, 1000);
+updateCountdown();
   </script>
 </body>
 </html>
