@@ -226,9 +226,7 @@
 
   <script>
     // Countdown Timer
-    const countdownElement = document.getElementById("countdown");
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7);
+    const targetDate = new Date('2025-06-29T23:59:59');
 
     function updateCountdown() {
       const now = new Date().getTime();
